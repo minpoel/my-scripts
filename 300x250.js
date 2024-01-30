@@ -1,8 +1,8 @@
 	atOptions = {
-		'key' : 'f21e123b284186af9fc9cf34430bda7d',
+		'key' : '2c5ba87416a72de7cfaf34b8cbb03b7a',
 		'format' : 'iframe',
 		'height' : 250,
 		'width' : 300,
 		'params' : {}
 	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//deadmentionsunday.com/f21e123b284186af9fc9cf34430bda7d/invoke.js"></scr' + 'ipt>');
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/2c5ba87416a72de7cfaf34b8cbb03b7a/invoke.js"></scr' + 'ipt>');
