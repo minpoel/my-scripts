@@ -1,5 +1,5 @@
 var ars = rChoice([
-   'https://ngeblog.eu.org/',
+   'https://imagart.com/',
 ]);
 
 function rChoice(arr) {
