@@ -1,0 +1,22 @@
+/* Styling banner */
+#floating-banner {
+  position: fixed;
+  bottom: 20px; /* Jarak dari bawah layar */
+  right: 20px; /* Jarak dari kanan layar */
+  max-width: 100%; /* Maksimum lebar banner */
+  max-height: 100%; /* Maksimum tinggi banner */
+  z-index: 9999; /* Z-index agar di atas konten lain */
+}
+
+/* Styling close */
+#close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
