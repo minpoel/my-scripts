@@ -2,21 +2,21 @@
     // Buat elemen div untuk floating ads
     var floatAds = document.createElement('div');
     floatAds.id = 'floatads';
-    floatAds.style.width = '100%';
-    floatAds.style.textAlign = 'center';
     floatAds.style.position = 'fixed';
     floatAds.style.bottom = '0';
-    floatAds.style.left = '0';
-    floatAds.style.right = '0';
+    floatAds.style.left = '50%';
+    floatAds.style.transform = 'translateX(-50%)';
+    floatAds.style.width = '100%';
+    floatAds.style.maxWidth = '728px'; // Sesuaikan dengan lebar maksimal iklan
+    floatAds.style.backgroundColor = '#ffffff'; // Sesuaikan warna background jika perlu
     floatAds.style.zIndex = '9999';
+    floatAds.style.boxShadow = '0 0 10px rgba(0,0,0,0.3)'; // Optional: tambahkan bayangan untuk efek floating
 
     // Buat container untuk iklan
     var adContainer = document.createElement('div');
-    adContainer.style.display = 'inline-block';
-    adContainer.style.maxWidth = '728px';
-    adContainer.style.height = 'auto';
-    adContainer.style.overflow = 'hidden';
+    adContainer.style.textAlign = 'center';
     adContainer.style.margin = 'auto';
+    adContainer.style.overflow = 'hidden';
 
     // Buat dan tambahkan script iklan ke dalam adContainer
     var script = document.createElement('script');
