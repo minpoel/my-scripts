@@ -8,16 +8,17 @@ var atOptions = {
 
 (function() {
 
-    var adContainer = document.createElement('div');
-    adContainer.style.position = 'fixed';
-    adContainer.style.top = '50%';
-    adContainer.style.left = '50%';
-    adContainer.style.transform = 'translate(-50%, -50%)';
-    adContainer.style.width = atOptions.width + 'px';
-    adContainer.style.height = atOptions.height + 'px';
-    adContainer.style.zIndex = '9999'; // Pastikan iklan muncul di atas konten lain
+    var center = document.createElement('center');
+    
 
-    document.body.appendChild(adContainer);
+    var adContainer = document.createElement('div');
+    adContainer.id = 'ad-container';
+    
+
+    center.appendChild(adContainer);
+
+    document.body.appendChild(center);
+
 
     var script = document.createElement('script');
     script.type = 'text/javascript';
