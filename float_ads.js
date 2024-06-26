@@ -12,6 +12,11 @@
     floatAds.style.zIndex = '9999';
     floatAds.style.boxShadow = '0 0 10px rgba(0,0,0,0.3)'; // Optional: tambahkan bayangan untuk efek floating
 
+    // Buat tombol close
+    var closeButton = document.createElement('div');
+    closeButton.innerHTML = "<a id='close-floatads' onclick='document.getElementById(&#39;floatads&#39;).style.display = &#39;none&#39;;' style='cursor:pointer;'><img alt='close' src='https://3.bp.blogspot.com/-ZZSacDHLWlM/VhvlKTMjbLI/AAAAAAAAF2M/UDzU4rrvcaI/s1600/btn_close.gif' title='close button'/></a>";
+    floatAds.appendChild(closeButton);
+
     // Buat container untuk iklan
     var adContainer = document.createElement('div');
     adContainer.style.textAlign = 'center';
@@ -22,15 +27,14 @@
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = 'https://minpoel.github.io/my-scripts/300x250.js';
-    adContainer.appendChild(script);
+
+    // Tambahkan event listener untuk memastikan script iklan dimuat sebelum ditambahkan ke adContainer
+    script.onload = function() {
+        adContainer.appendChild(script);
+    };
 
     // Tambahkan adContainer ke dalam floatAds
     floatAds.appendChild(adContainer);
-
-    // Buat tombol close
-    var closeButton = document.createElement('div');
-    closeButton.innerHTML = "<a id='close-floatads' onclick='document.getElementById(&#39;floatads&#39;).style.display = &#39;none&#39;;' style='cursor:pointer;'><img alt='close' src='https://3.bp.blogspot.com/-ZZSacDHLWlM/VhvlKTMjbLI/AAAAAAAAF2M/UDzU4rrvcaI/s1600/btn_close.gif' title='close button'/></a>";
-    floatAds.appendChild(closeButton);
 
     // Tambahkan floatAds ke body
     document.body.appendChild(floatAds);
