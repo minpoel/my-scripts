@@ -5,12 +5,12 @@
     floatAds.style.width = '100%';
     floatAds.style.margin = 'auto';
     floatAds.style.textAlign = 'center';
-    floatAds.style.float = 'none';
-    floatAds.style.overflow = 'hidden';
-    floatAds.style.display = 'scroll';
     floatAds.style.position = 'fixed';
     floatAds.style.bottom = '0';
+    floatAds.style.left = '0';
+    floatAds.style.right = '0';
     floatAds.style.zIndex = '9999';
+    floatAds.style.backgroundColor = '#ffffff'; // Sesuaikan warna background jika perlu
 
     // Buat tombol close
     var closeButton = document.createElement('div');
