@@ -8,33 +8,41 @@ body {
 /* Banner */
 #floating-banner {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  /* Atur lebar banner */
+  bottom: 50%;  /* Letakkan di tengah vertikal */
+  left: 50%;  /* Letakkan di tengah horizontal */
+  transform: translate(-50%, -50%); /* Atur posisi relatif ke tengah */
   width: 300px; 
-  /* Atur tinggi banner */
   height: 250px; 
   background-color: #f0f0f0;
   padding: 15px;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Atur arah flex menjadi vertikal */
+  align-items: center; /* Ratakan konten secara horizontal */
 }
 
 /* Konten Banner */
 #floating-banner .content {
-  flex: 1;
+  flex: 1; 
+  text-align: center; /* Ratakan konten secara horizontal */
 }
 
 /* Tombol Tutup */
 #floating-banner .close {
+  position: absolute; /* Posisi absolut untuk menempel di banner */
+  top: 10px; /* Atur jarak dari atas banner */
+  left: 50%;
+  transform: translateX(-50%); /* Letakkan di tengah horizontal */
   background: none;
   border: none;
   padding: 8px;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.5em; /* Atur ukuran huruf X */
+  color: red; /* Warna merah */
+  display: flex; /*  Tambahkan ini */
+  justify-content: center; /*  Rata tengah horizontal */
+  align-items: center; /* Rata tengah vertikal */
 }
 
 /* Responsif */
