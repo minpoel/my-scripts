@@ -1,49 +1,48 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
+.banner-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Posisikan di tengah */
+  width: 100%;
+  background-color: #fff; 
+  padding: 20px;
+  transition: bottom 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.banner-content {
+  text-align: center; /* Pusatkan konten */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f00; 
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%; 
+}
+
+.close-btn:hover {
+  background-color: #c00; 
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
   .banner-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff; /* Warna latar belakang banner */
-    padding: 20px;
-    transition: bottom 0.3s ease-in-out; /* Animasi transisi */
-    z-index: 1000; /* Pastikan banner berada di atas elemen lain */
-  }
-
-  .banner-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px;
   }
 
   .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #f00; /* Warna merah */
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 50%; /* Memberikan bentuk bulat pada tombol */
+    top: 5px;
+    right: 5px;
   }
-
-  .close-btn:hover {
-    background-color: #c00; /* Warna merah yang lebih gelap saat dihover */
-  }
-
-  /* Responsif */
-  @media screen and (max-width: 768px) {
-    .banner-container {
-      padding: 10px;
-    }
-
-    .close-btn {
-      top: 5px;
-      right: 5px;
-    }
-  }
+}
