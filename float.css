@@ -5,33 +5,36 @@ body {
   font-family: sans-serif;
 }
 
+/* Container Konten */
+#content-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 /* Banner */
 #floating-banner {
   position: fixed;
-  bottom: 50%;  /* Letakkan di tengah vertikal */
-  left: 50%;  /* Letakkan di tengah horizontal */
-  transform: translate(-50%, -50%); /* Atur posisi relatif ke tengah */
-  width: 300px; 
-  height: 250px; 
+  bottom: 0; /* Posisi di bagian bawah */
+  left: 50%; /* Posisi di tengah horizontal */
+  transform: translateX(-50%); /* Ratakan ke tengah horizontal */
+  width: 300px; /* Lebar banner */
+  height: 250px; /* Tinggi banner */
   background-color: #f0f0f0;
   padding: 15px;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  display: flex;
-  flex-direction: column; /* Atur arah flex menjadi vertikal */
-  align-items: center; /* Ratakan konten secara horizontal */
 }
 
 /* Konten Banner */
 #floating-banner .content {
-  flex: 1; 
-  text-align: center; /* Ratakan konten secara horizontal */
+  /* ... */
 }
 
 /* Tombol Tutup */
-#floating-banner .close {
-  position: absolute; /* Posisi absolut untuk menempel di banner */
-  top: 10px; /* Atur jarak dari atas banner */
+.close {
+  position: fixed; /* Posisi absolut untuk menempel di jendela browser */
+  bottom: 270px; /* Atur jarak dari bawah banner */
   left: 50%;
   transform: translateX(-50%); /* Letakkan di tengah horizontal */
   background: none;
@@ -43,10 +46,11 @@ body {
   display: flex; /*  Tambahkan ini */
   justify-content: center; /*  Rata tengah horizontal */
   align-items: center; /* Rata tengah vertikal */
+  z-index: 1001; /* Atur z-index lebih tinggi dari banner */
 }
 
 /* Responsif */
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   #floating-banner {
     padding: 10px;
   }
@@ -54,10 +58,4 @@ body {
   #floating-banner .content {
     font-size: 14px;
   }
-}
-
-/* Gaya untuk Iklan AdSense */
-.adsbygoogle {
-  display: block;
-  margin: 0 auto;
 }
