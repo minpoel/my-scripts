@@ -16,8 +16,8 @@ body {
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
-  justify-content: space-between; /* Distribusikan konten dan tombol */
-  align-items: center; /* Rata tengah vertikal */
+  justify-content: center; /*  Rata tengah horizontal */
+  align-items: flex-start; /* Rata tengah vertikal di atas */
 }
 
 /* Konten Banner */
@@ -32,9 +32,7 @@ body {
   padding: 8px;
   cursor: pointer;
   font-size: 1.2em;
-  /* ... gaya lain ... */
-  justify-content: flex-end; /* Posisikan ke kanan */
-  align-self: flex-end; /* Posisikan ke bawah */
+  color: red; /* Warna merah */
 }
 
 
