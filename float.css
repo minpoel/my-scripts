@@ -5,32 +5,24 @@ body {
   font-family: sans-serif;
 }
 
-/* Container Konten */
-#content-container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 /* Banner */
 #floating-banner {
   position: fixed;
   bottom: 0;
   left: 0;
-  /* width: 300px; */ /* Hapus lebar */
-  /* height: 250px; */ /* Hapus tinggi */
+  width: 100%;
   background-color: #f0f0f0;
   padding: 15px;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
-  justify-content: center; /*  Rata tengah horizontal */
-  align-items: center; /* Rata tengah vertikal */
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Konten Banner */
 #floating-banner .content {
-  flex: 1; 
+  flex: 1;
 }
 
 /* Tombol Tutup */
@@ -39,15 +31,11 @@ body {
   border: none;
   padding: 8px;
   cursor: pointer;
-  font-size: 1.5em; /* Atur ukuran huruf X */
-  color: red; /* Warna merah */
-  display: flex; /*  Tambahkan ini */
-  justify-content: center; /*  Rata tengah horizontal */
-  align-items: center; /* Rata tengah vertikal */
+  font-size: 1.2em;
 }
 
 /* Responsif */
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   #floating-banner {
     padding: 10px;
   }
@@ -55,4 +43,10 @@ body {
   #floating-banner .content {
     font-size: 14px;
   }
+}
+
+/* Gaya untuk Iklan AdSense */
+.adsbygoogle {
+  display: block;
+  margin: 0 auto;
 }
