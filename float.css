@@ -18,13 +18,16 @@ body {
   bottom: 0; /* Posisi di bagian bawah */
   left: 50%; /* Posisi di tengah horizontal */
   transform: translateX(-50%); /* Ratakan ke tengah horizontal */
-  width: 300px; /* Lebar banner */
-  height: 250px; /* Tinggi banner */
+  /* width: 300px; */ /* Hapus lebar tetap */
+  /* height: 250px; */ /* Hapus tinggi tetap */
   background-color: #f0f0f0;
   padding: 15px;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: transform 0.3s ease-in-out; /* Efek transisi untuk animasi */
+  display: flex;
+  flex-direction: column; /* Atur arah flex menjadi vertikal */
+  align-items: center; /* Ratakan konten secara horizontal */
 }
 
 /* Animasi Banner */
@@ -34,7 +37,8 @@ body {
 
 /* Konten Banner */
 #floating-banner .content {
-  /* ... */
+  flex: 1; 
+  text-align: center; /* Ratakan konten secara horizontal */
 }
 
 /* Tombol Tutup */
@@ -58,6 +62,7 @@ body {
 @media (max-width: 750px) {
   #floating-banner {
     padding: 10px;
+    width: 90%; /* Lebar banner 90% dari lebar layar */
   }
 
   #floating-banner .content {
