@@ -17,15 +17,15 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 300px; /* Lebar banner */
-  height: 250px; /* Tinggi banner */
+  /* width: 300px; */ /* Hapus lebar */
+  /* height: 250px; */ /* Hapus tinggi */
   background-color: #f0f0f0;
   padding: 15px;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
   justify-content: center; /*  Rata tengah horizontal */
-  align-items: flex-start; /* Rata tengah vertikal di atas */
+  align-items: center; /* Rata tengah vertikal */
 }
 
 /* Konten Banner */
