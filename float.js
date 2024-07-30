@@ -1,3 +1,11 @@
-function closeBanner() {
-  document.getElementById("floating-banner").style.display = "none";
+function resizeBanner() {
+  const banner = document.getElementById("floating-banner");
+  const adElement = document.querySelector(".adsbygoogle");
+
+  if (adElement) {
+    banner.style.width = adElement.offsetWidth + "px";
+    banner.style.height = adElement.offsetHeight + "px";
+  }
 }
+
+window.addEventListener('load', resizeBanner);
