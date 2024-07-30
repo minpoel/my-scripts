@@ -1,3 +1,9 @@
+function closeBanner() {
+  const banner = document.getElementById("floating-banner");
+  banner.style.display = "none"; 
+}
+
+// Fungsi untuk mengatur ukuran banner
 function resizeBanner() {
   const banner = document.getElementById("floating-banner");
   const adElement = document.querySelector(".adsbygoogle");
@@ -8,4 +14,5 @@ function resizeBanner() {
   }
 }
 
-window.addEventListener('load', resizeBanner);
+// Panggil resizeBanner setelah iklan dimuat
+window.addEventListener('load', resizeBanner); 
