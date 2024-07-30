@@ -1,12 +1,7 @@
-function closeBanner() {
-  const banner = document.getElementById("floating-banner");
-  banner.classList.remove('show'); // Hapus class 'show'
-}
+// Script untuk mengontrol tampilan banner
+    const bannerContainer = document.querySelector('.banner-container');
+    const closeBtn = document.querySelector('.close-btn');
 
-function showBanner() {
-  const banner = document.getElementById("floating-banner");
-  banner.classList.add('show'); // Tambahkan class 'show'
-}
-
-// Panggil showBanner setelah banner dimuat
-window.addEventListener('load', showBanner);
+    closeBtn.addEventListener('click', () => {
+      bannerContainer.style.bottom = '-100%'; // Menghilangkan banner
+    });
