@@ -25,13 +25,15 @@ body {
   flex: 1;
 }
 
-/* Tombol Tutup */
+/* Gaya untuk Tombol Close */
 #floating-banner .close {
   background: none;
   border: none;
   padding: 8px;
   cursor: pointer;
   font-size: 1.2em;
+  /* Tambahkan warna jika diperlukan */
+  color: #333; 
 }
 
 /* Responsif */
