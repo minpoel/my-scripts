@@ -1,71 +1,49 @@
-/* Gaya Dasar */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
-/* Container Konten */
-#content-container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Banner */
-#floating-banner {
-  position: fixed;
-  bottom: 0; /* Posisi di bagian bawah */
-  left: 50%; /* Posisi di tengah horizontal */
-  transform: translateX(-50%); /* Ratakan ke tengah horizontal */
-  /* width: 300px; */ /* Hapus lebar tetap */
-  /* height: 250px; */ /* Hapus tinggi tetap */
-  background-color: #f0f0f0;
-  padding: 15px;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  transition: transform 0.3s ease-in-out; /* Efek transisi untuk animasi */
-  display: flex;
-  flex-direction: column; /* Atur arah flex menjadi vertikal */
-  align-items: center; /* Ratakan konten secara horizontal */
-}
-
-/* Animasi Banner */
-#floating-banner.show {
-  transform: translateX(-50%) translateY(0);
-}
-
-/* Konten Banner */
-#floating-banner .content {
-  flex: 1; 
-  text-align: center; /* Ratakan konten secara horizontal */
-}
-
-/* Tombol Tutup */
-.close {
-  position: absolute; /* Posisi absolut untuk menempel di banner */
-  top: 10px; /* Atur jarak dari atas banner */
-  right: 10px; /* Atur jarak dari kanan banner */
-  background: none;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  font-size: 1.5em; /* Atur ukuran huruf X */
-  color: red; /* Warna merah */
-  display: flex; /*  Tambahkan ini */
-  justify-content: center; /*  Rata tengah horizontal */
-  align-items: center; /* Rata tengah vertikal */
-  z-index: 1001; /* Atur z-index lebih tinggi dari banner */
-}
-
-/* Responsif */
-@media (max-width: 750px) {
-  #floating-banner {
-    padding: 10px;
-    width: 90%; /* Lebar banner 90% dari lebar layar */
+    margin: 0;
+    padding: 0;
   }
 
-  #floating-banner .content {
-    font-size: 14px;
+  .banner-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Warna latar belakang banner */
+    padding: 20px;
+    transition: bottom 0.3s ease-in-out; /* Animasi transisi */
+    z-index: 1000; /* Pastikan banner berada di atas elemen lain */
   }
-}
+
+  .banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f00; /* Warna merah */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%; /* Memberikan bentuk bulat pada tombol */
+  }
+
+  .close-btn:hover {
+    background-color: #c00; /* Warna merah yang lebih gelap saat dihover */
+  }
+
+  /* Responsif */
+  @media screen and (max-width: 768px) {
+    .banner-container {
+      padding: 10px;
+    }
+
+    .close-btn {
+      top: 5px;
+      right: 5px;
+    }
+  }
